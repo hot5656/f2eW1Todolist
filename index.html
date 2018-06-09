@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<!-- fonts roboto-medium -->
+	<link href="http://allfont.net/allfont.css?fonts=roboto-medium" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+			<ul>
+				<li><a class="manu" href="#" onclick="changePage(0)">My Tasks</a></li>
+				<li><a class="manu" href="#" onclick="changePage(1)">In process</a></li>
+				<li><a class="manu" href="#" onclick="changePage(2)">Complete</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="create">
+				<a href="#"><span class="icon_size">+</span> Add Task</a>
+			</div>
+			<div class="task_my edit">
+				<div class="edit_title">
+					<a href="#"><i class="fas fa-square color_white"></i></a>
+					Cloud project with Dannil
+					<span class="put_right" >
+						<a href="#"><i class="fas fa-star margin_r10 color_org"></i></a>
+						<a href="#"><i class="fas fa-pencil-alt color_blue_light"></i></a>
+					</span>
+				</div>
+				<div class="edit_head">
+					<i class="far fa-calendar-alt"></i>
+					Deadline
+				</div>
+				<div  class="edit_content">
+					<input class="text" type="text" placeholder="yyyy/mm/dd" id="date" name="date">
+					<input class="text" type="text" placeholder="hh:mm" id="time" name="time">
+				</div>
+				<div class="edit_head">
+					<a href="#"><i class="far fa-file"></i></a>
+					File
+				</div>
+				<div class="edit_content icon_size add_file">
+					<a href="#"><i class="fas fa-plus-square add_file"></i></a>
+				</div>
+				<div class="edit_head">
+					<i class="far fa-comment-dots"></i>
+					Comment
+				</div>
+				<div  class="edit_content">
+						<textarea class="content-text" name="common" id="content" placeholder="Type your memo here…"></textarea>
+				</div>
+				<button class="cancel" type="button">
+					<i class="fas fa-times"></i>
+					Cancel
+				</button>
+				<button class="save" type="button">
+					<i class="fas fa-plus"></i>
+					Save					
+				</button>
+				<div class="clear-fix"></div>
+			</div>
+			<div class="task_process list bp_color_org_light">
+				<a href="#"><i class="fas fa-square color_white"></i></a>
+				Type Something Here…
+				<span class="put_right" >
+					<a href="#"><i class="fas fa-star margin_r10 color_org"></i></a>
+					<a href="#"><i class="fas fa-pencil-alt"></i></a>
+				</span>	
+				<div class="list_common color_gray_l3">
+					<i class="far fa-file"></i>
+					<i class="far fa-comment-dots"></i>
+				</div>
+			</div>
+			<div class="task_process list bp_color_gray_l1">
+				<a href="#"><i class="fas fa-square color_white"></i></a>
+				Type Something Here…
+				<span class="put_right" >
+					<a href="#"><i class="far fa-star margin_r10"></i></a>
+					<a href="#"><i class="fas fa-pencil-alt"></i></a>
+				</span>	
+				<div class="list_common color_gray_l3">
+					<i class="far fa-calendar-alt"></i>
+					6/18
+				</div>
+			</div>
+			<div class="task_process list bp_color_gray_l1">
+				<a href="#"><i class="fas fa-square color_white"></i></a>
+				Type Something Here…
+				<span class="put_right" >
+					<a href="#"><i class="far fa-star margin_r10"></i></a>
+					<a href="#"><i class="fas fa-pencil-alt"></i></a>
+				</span>	
+				<div class="list_common color_gray_l3">
+					<i class="far fa-file"></i>
+				</div>
+			</div>
+			<div class="task_complete list bp_color_gray_l1">
+				<a href="#"><i class="fas fa-check-square color_blue_light"></i></a>
+				<span class="text_line_throuth color_gray_l3">Type Something Here…</span>
+				<span class="put_right" >
+					<a href="#"><i class="far fa-star margin_r10"></i></a>
+					<a href="#"><i class="fas fa-pencil-alt"></i></a>
+				</span>	
+			</div>
+			<div class="content_foot color_gray_l3">
+				4 tasks left
+			</div>
+		</div>
+	</div>
+
+	<script src="all.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/* font-size: 100%; */
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;  /* 去除黑點 */
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* common css */
+/* 
+#4A90E2	blue_light
+#00408B blue_dark
+#D0021B red
+#F5A623 org
+#FFF2DC org_light
+#F2F2F2 gray_l1
+#C8C8C8	gray_l3
+#757575 gray_l4
+#FFFFFF	white
+#000000	black
+#E1E1E1 gray_l2 
+*/
+/* 因為某些情況不能繼承故加 inherit 補強 - 如 input 不能繼承 body */
+* {
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  font-weight: inherit;
+}
+body {
+	 font-family: 'Roboto Medium', arial;    /* fonts roboto-medium */
+	/* font-family: Microsoft JhengHei;  */  /* 微軟正黑體 */
+	/* font-weight: bold; */	/* 粗體字 */
+	/* font-size: 16px; - 字型大小(default 16px), also support 120% mode */
+}
+a {
+	text-decoration: none;	/*無底線*/
+}
+.clear-fix {
+	clear: both;	/*對齊,div include height*/
+}
+/* common css-2 */
+/*input focus 變化*/
+/* .content-text:focus {
+	border: 2px solid #14c1e2;
+} */
+.create {
+	background-color: white;
+	color: #C8C8C8;
+	font-size: 24px;
+	line-height: 28px;
+/*	text-align: center;*/
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+.icon_size {
+	font-size: 30px;
+}
+.edit {
+	background-color: #F2F2F2;
+	margin-top: 24px;
+	margin-bottom: 12px;
+}
+.edit_title {
+	background-color: #FFF2DC;
+	padding: 24px 24px 24px 24px;
+	font-size: 24px;
+}
+.put_right {
+	float: right;
+}
+.margin_r10 {
+	margin-right: 10px;
+}
+.color_white {
+	color: #FFFFFF;
+}
+.color_org {
+	color: #F5A623;
+}
+.color_blue_light {
+	color: #4A90E2;
+}
+.color_gray_l3 {
+	color: #C8C8C8;
+}
+.bp_color_gray_l1 {
+	background-color: #F2F2F2;
+}
+.bp_color_org_light {
+	background-color: #FFF2DC;
+}
+.edit_head {
+	margin-top: 16px;
+	margin-left: 60px;
+}
+.edit_content {
+	margin-top: 16px;
+	margin-left: 75px;
+}
+.text {
+	font-size: 16px;
+	line-height: 24px;
+	padding-left: 4px;
+}
+.content-text {
+	font-size: 16px;
+	line-height: 24px;
+	width: 413px;
+	height: 104px;
+	padding-left: 4px;
+}
+.cancel {
+	float: left;
+	width: 310px;
+	height: 60px;
+	background-color: #FFFFFF; 
+	color: #D0021B;
+	margin-top: 32px;
+	font-size: 24px;
+	line-height: 60px;
+	text-align: center;
+}
+.cancel:hover {
+	background-color: #FDFDFD;
+}
+.save {
+	float: left;
+	width: 310px;
+	height: 60px;
+	background-color: #4A90E2;;
+	color: #FFFFFF;
+	margin-top: 32px;
+	font-size: 24px;
+	line-height: 60px;
+	text-align: center;
+}
+.save:hover {
+	background-color: #3982D7;
+}
+.list {
+	margin-top: 12px;
+	font-size: 24px;
+	line-height: 28px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.list_common {
+	margin-left: 25px;
+	font-size: 16px;
+	margin-top: 10px;
+}
+.text_line_throuth {
+	text-decoration: line-through;
+}
+.content_foot {
+	margin-top: 12px;
+	font-size: 24px;
+	line-height: 28px;	
+	margin-left: 20px;
+}
+.add_file a{
+	color: #C8C8C8;  
+} 
+.add_file a:hover {
+	color: #4A90E2;
+}
+
+
+/* layout css */
+.wrap {
+	position: relative; /* 絕對位置以此為準 */
+	width: 1024px; 		/* 坐大寬度 */
+	margin: 0 auto;		/* 至於中間 */
+	background:#E1E1E1;
+	/*border: 1px solid orange;*/
+}
+/* layout css - header */
+.header {
+	height: 76px;			/* 高度 */
+	background-color: #4A90E2;
+	padding-left: 182px;
+}
+/* layout css - content */
+.content {
+/* 	background:#E1E1E1; */
+	margin: 18px 202px 0px 202px;
+	padding-bottom: 20px;
+}
+/* layout css - footer */
+/* .footer {
+	background: #323228;
+	height: 135px;
+} */
+
+/* header css */
+.header a {
+	float: left;
+	color: #00408B;
+	font-size: 24px;
+	line-height: 28px;
+	width: 160px;
+	height: 50px;
+	margin: 21px 30px 0px 30px;
+	text-align: center;
+	border-bottom: 5px solid #4A90E2;
+}
+.header a:hover {
+	color: #FFFFFF;
+	border-bottom-color: #00408B;
+}
+
+
+
